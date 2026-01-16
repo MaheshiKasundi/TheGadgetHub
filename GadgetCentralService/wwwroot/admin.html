@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GadgetCentral Admin</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <h1>GadgetCentral Dashboard</h1>
+            <p>Distributor Inventory Management System</p>
+        </header>
+
+        <div class="dashboard-grid">
+            <div class="card">
+                <h3>Add New Gadget</h3>
+                <form id="productForm">
+                    <div class="field">
+                        <label>Product Reference</label>
+                        <input type="text" id="productId" placeholder="e.g. ITM-001" required>
+                    </div>
+                    <div class="field">
+                        <label>Item Name</label>
+                        <input type="text" id="productName" placeholder="Product Name" required>
+                    </div>
+                    <div class="field">
+                        <label>Unit Price ($)</label>
+                        <input type="number" id="price" placeholder="0.00" step="0.01" required>
+                    </div>
+                    <div class="field">
+                        <label>Stock Count</label>
+                        <input type="number" id="quantity" placeholder="Quantity" required>
+                    </div>
+                    <div class="field full-width">
+                        <label>Delivery Lead Time (Days)</label>
+                        <input type="number" id="days" placeholder="Days" required>
+                    </div>
+                    <button type="submit">Update Inventory</button>
+                </form>
+                <p id="statusMsg"></p>
+            </div>
+
+            <div class="card inventory-card">
+                <h3>Live Inventory</h3>
+                <div class="table-container">
+                    <table id="productTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Product Name</th>
+                                <th>Price</th>
+                                <th>In Stock</th>
+                                <th>Lead Time</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>

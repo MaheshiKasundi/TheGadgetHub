@@ -1,0 +1,6 @@
+@GadgetHubService_HostAddress = http://localhost:5198
+
+GET {{GadgetHubService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

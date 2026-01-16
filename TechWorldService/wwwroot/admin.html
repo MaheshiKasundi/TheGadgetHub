@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechWorld Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <header class="admin-header">
+            <h1>TechWorld <span>Distributor Admin</span></h1>
+        </header>
+
+        <div class="admin-grid">
+            <aside class="form-container">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Inventory Entry</h3>
+                        <p>Register new gadget stock into the distributor system.</p>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>Product ID</label>
+                            <input type="text" id="pId" placeholder="e.g. ITM-001">
+                        </div>
+                        <div class="input-group">
+                            <label>Product Name</label>
+                            <input type="text" id="pName" placeholder="Enter name">
+                        </div>
+                        <div class="input-group">
+                            <label>Price</label>
+                            <input type="number" id="pPrice" placeholder="0.00">
+                        </div>
+                        <div class="input-group">
+                            <label>Quantity</label>
+                            <input type="number" id="pQty" placeholder="Units">
+                        </div>
+                        <div class="input-group">
+                            <label>Delivery (Days)</label>
+                            <input type="number" id="pDays" placeholder="Lead time">
+                        </div>
+                    </div>
+
+                    <div class="action-row">
+                        <button onclick="addProduct()">Save to Inventory</button>
+                        <p id="message"></p>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="inventory-container">
+                <div class="card">
+                    <h3>Live Inventory List</h3>
+                    <div class="table-scroll">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                    <th>Stock</th>
+                                    <th>Days</th>
+                                </tr>
+                            </thead>
+                            <tbody id="productTableBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

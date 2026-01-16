@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gadget Hub | Premium Tech Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="nav-content">
+            <h1>The Gadget Hub<span>.</span></h1>
+        </div>
+    </header>
+
+    <div class="shop-container">
+        <main class="products-section">
+            <div id="statusMessage" class="status"></div>
+            <div class="product-grid"></div>
+        </main>
+
+        <aside class="cart-section">
+            <div class="cart-box">
+                <h2>Your Basket</h2>
+                <div id="cartItems">
+                    <p class="empty-msg">Your basket is empty.</p>
+                </div>
+
+                <div id="cartSummary" style="display: none;">
+                    <div class="summary-line">
+                        <span>Grand Total:</span>
+                        <span id="grandTotal">$0.00</span>
+                    </div>
+                    <button onclick="placeFinalOrder()" class="checkout-btn">Complete Purchase</button>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
